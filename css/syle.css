@@ -1,0 +1,208 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Arvo", serif;
+}
+
+main .img--briefcase6, main .img--briefcase5, main .img--briefcase4, main .img--briefcase3, main .img--briefcase2, main .img--briefcase1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 370px;
+}
+main .img--briefcase6 .overlay, main .img--briefcase5 .overlay, main .img--briefcase4 .overlay, main .img--briefcase3 .overlay, main .img--briefcase2 .overlay, main .img--briefcase1 .overlay {
+  background: rgba(255, 255, 255, 0.4941176471);
+  opacity: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+main .img--briefcase6 .overlay:hover, main .img--briefcase5 .overlay:hover, main .img--briefcase4 .overlay:hover, main .img--briefcase3 .overlay:hover, main .img--briefcase2 .overlay:hover, main .img--briefcase1 .overlay:hover {
+  opacity: 1;
+}
+main .img--briefcase6 .overlay .material-icons, main .img--briefcase5 .overlay .material-icons, main .img--briefcase4 .overlay .material-icons, main .img--briefcase3 .overlay .material-icons, main .img--briefcase2 .overlay .material-icons, main .img--briefcase1 .overlay .material-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main .container--tittle6, main .container--tittle2, main .container--tittle1 {
+  grid-area: container--tittle1;
+  border-top: 2px solid black;
+  padding: 40px 50px 0px 0px;
+}
+main .container--tittle6 h3, main .container--tittle2 h3, main .container--tittle1 h3 {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: left;
+}
+main .container--tittle6 p, main .container--tittle2 p, main .container--tittle1 p {
+  margin-top: 20px;
+  font-size: 12px;
+  color: gray;
+  text-align: justify;
+}
+
+main .container--tittle5, main .container--tittle4, main .container--tittle3 {
+  grid-area: container--tittle1;
+  border-top: 2px solid black;
+  padding: 40px 0px 0px 50px;
+}
+main .container--tittle5 h3, main .container--tittle4 h3, main .container--tittle3 h3 {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: end;
+}
+main .container--tittle5 p, main .container--tittle4 p, main .container--tittle3 p {
+  margin-top: 20px;
+  font-size: 12px;
+  color: gray;
+  text-align: justify;
+}
+
+.material-icons {
+  font-size: 48px;
+}
+
+.imagen-modal {
+  max-width: 70%;
+  max-height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.6s ease;
+  -o-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+  z-index: 0;
+}
+
+.iconCerrar {
+  color: white;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  justify-items: center;
+  padding: 100px 0px;
+}
+main .container--gallery {
+  display: grid;
+  max-width: 1800px;
+  width: 80%;
+  grid-gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "img--briefcase1 img--briefcase1 container--tittle1 ." "img--briefcase1 img--briefcase1 img--briefcase2 container--tittle2" "container--tittle3 img--briefcase3 img--briefcase4 img--briefcase4" ". container--tittle4 img--briefcase4 img--briefcase4" "container--tittle5 img--briefcase5 img--briefcase6 container--tittle6";
+}
+main .img--briefcase1 {
+  grid-area: img--briefcase1;
+  background-image: url("../assets/img/Mesa de trabajo 2.png");
+}
+main .container--tittle1 {
+  grid-area: container--tittle1;
+}
+main .img--briefcase2 {
+  grid-area: img--briefcase2;
+  background-image: url("../assets/img/Mesa de trabajo 1.png");
+}
+main .container--tittle2 {
+  grid-area: container--tittle2;
+}
+main .img--briefcase3 {
+  grid-area: img--briefcase3;
+  background-image: url("../assets/img/Mesa de trabajo 3.png");
+}
+main .container--tittle3 {
+  grid-area: container--tittle3;
+}
+main .img--briefcase4 {
+  grid-area: img--briefcase4;
+  background-image: url("../assets/img/Mesa de trabajo 4.png");
+}
+main .container--tittle4 {
+  grid-area: container--tittle4;
+}
+main .img--briefcase5 {
+  grid-area: img--briefcase5;
+  background-image: url("../assets/img/Mesa de trabajo 6.png");
+}
+main .container--tittle5 {
+  grid-area: container--tittle5;
+}
+main .img--briefcase6 {
+  grid-area: img--briefcase6;
+  background-image: url("../assets/img/Mesa de trabajo 5.png");
+}
+main .container--tittle6 {
+  grid-area: container--tittle6;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@media all and (max-width: 1900px) {
+  main .container--gallery {
+    width: 90%;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+}
+@media all and (max-width: 1640px) {
+  main .container--gallery {
+    grid-gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "img--briefcase1 img--briefcase1 container--tittle1" "img--briefcase1 img--briefcase1 img--briefcase2" "container--tittle3 img--briefcase3 container--tittle2" "container--tittle4 img--briefcase4 img--briefcase4" "img--briefcase5 img--briefcase4 img--briefcase4" "container--tittle5  img--briefcase6 container--tittle6";
+  }
+}
+@media all and (max-width: 1090px) {
+  main .container--gallery {
+    grid-gap: 20px;
+  }
+  main .img--briefcase6, main .img--briefcase5, main .img--briefcase4, main .img--briefcase3, main .img--briefcase2, main .img--briefcase1 {
+    min-height: 280px;
+  }
+}
+@media all and (max-width: 840px) {
+  main .img--briefcase6, main .img--briefcase5, main .img--briefcase4, main .img--briefcase3, main .img--briefcase2, main .img--briefcase1 {
+    min-height: 200px;
+  }
+}
+@media all and (max-width: 780px) {
+  main .container--gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas: "img--briefcase1 img--briefcase1" "img--briefcase1 img--briefcase1" "container--tittle1 container--tittle1" "img--briefcase2 container--tittle2" "container--tittle3 img--briefcase3" "img--briefcase4 img--briefcase4" "img--briefcase4 img--briefcase4" "container--tittle4 container--tittle4" "container--tittle5 img--briefcase5" "img--briefcase6 container--tittle6 ";
+  }
+  main .img--briefcase6, main .img--briefcase5, main .img--briefcase4, main .img--briefcase3, main .img--briefcase2, main .img--briefcase1 {
+    min-height: 150px;
+  }
+}/*# sourceMappingURL=syle.css.map */
